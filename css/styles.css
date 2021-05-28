@@ -8,20 +8,35 @@
   --background-color-button: rgb(33, 150, 243);
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --background-color-filter: rgba(245, 244, 250, 1);
+  --background-color-header: rgba(255, 255, 255, 1);
 }
 * {
   text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: var(--black-color);
 }
+.section {
+  padding: 94px 0;
+  margin: 0 auto;
+}
+.img {
+  display: block;
+}
+
 /* <!-- Index.html --> */
 
 /* Логотип */
+
 .header {
-  background: var(--background-color);
+  margin-top: 24px;
+  background: var(--background-color-header);
 }
 .logo {
   color: var(--black-color);
@@ -29,14 +44,22 @@ body {
   font-weight: bold;
   font-size: 26px;
   line-height: 1.192;
+  padding-right: 93px;
 }
 .web {
   color: var(--blue-color);
 }
 
-/* Студия */
 .navigation .studio.current {
   color: var(--blue-color);
+}
+.navList {
+  display: flex;
+  width: 294px;
+  padding-bottom: 32px;
+}
+.navList li {
+  padding-right: 50px;
 }
 .studio {
   text-decoration: none;
@@ -44,6 +67,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
+  padding: 32px 0px;
 }
 .studio:hover,
 .studio:focus {
@@ -59,6 +83,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
+  padding: 32px 0px;
 }
 .portfolio:hover,
 .portfolio:focus {
@@ -66,20 +91,27 @@ body {
 }
 
 /* Контакты */
+.container,
+.contactList {
+  display: flex;
+}
 .contact {
   color: var(--black-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
+  padding: 32px 0px;
 }
 
 /* почта */
+
 .mail {
   color: var(--color-grey);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
+  padding-left: 331px;
 }
 .mail:hover,
 .mail:focus {
@@ -93,20 +125,28 @@ body {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
+  margin-left: 50px;
 }
 /* Секция Эффективные решения для вашего бизнеса  */
 .sectionEffect {
+  height: 600px;
+  text-align: center;
   background: var(--background-section);
+  /* padding: 200px 452px 280px 452px; */
 }
+
 .effect {
   color: var(--color-white);
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
-  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 200px;
 }
+
 .button {
+  display: inline-block;
   font-family: inherit;
   background-color: var(--background-color-button);
   color: var(--color-white);
@@ -114,22 +154,29 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
   align-items: center;
-  text-align: center;
   cursor: pointer;
+  padding: 10px 32px;
+  border-radius: 4px;
 }
 .button:hover,
 .button:focus {
   color: var(--color-white);
 }
 /* Секция описание */
+.sectionDescription {
+  display: flex;
+  margin-top: 94px;
+  margin-bottom: 94px;
+  /* padding: 94px 0px; */
+}
 .descriptionTitle {
   font-weight: bold;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 .descriptionText {
   font-weight: normal;
@@ -137,9 +184,18 @@ body {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--color-grey);
+  padding-right: 30px;
 }
 
 /* Чем мы занимаемся */
+.workList {
+  display: flex;
+  justify-content: space-between;
+}
+.workListItem {
+  padding-top: 50px;
+  padding-right: 30px;
+}
 .workTitle {
   font-weight: bold;
   font-size: 36px;
@@ -149,7 +205,17 @@ body {
 }
 
 /* Наша команда */
+.teamList {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 94px;
+}
+
+.teamListItem {
+  padding-right: 30px;
+}
 .ourTeam {
+  padding-top: 94px;
   background: var(--background-ourTeam);
 }
 .teamTitle {
@@ -165,6 +231,8 @@ body {
   line-height: 1.187;
   text-align: center;
   letter-spacing: 0.03em;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .teamWork {
   font-weight: normal;
@@ -175,18 +243,24 @@ body {
 }
 /* Данные */
 .footer {
+  height: 252px;
+  padding-top: 60px;
   background-color: var(--background-section);
 }
 .studioWhite {
   color: var(--color-white);
 }
 .sectionAddress {
+  text-align: left;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--color-white);
+}
+.address {
+  padding-top: 20px;
 }
 .contactFooter {
   text-decoration: none;
@@ -196,6 +270,10 @@ body {
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
 }
+.contactFooter {
+  padding-top: 9px;
+  padding-bottom: 60px;
+}
 .contactFooter:hover,
 .contactFooter:focus {
   color: var(--blue-color);
@@ -204,6 +282,11 @@ body {
 /* <!-- Portfolio.html --> */
 
 /* Кнопки навигации */
+.filter {
+  display: flex;
+  justify-content: center;
+  padding-top: 94px;
+}
 .buttonFilter {
   background: var(--background-color-filter);
   color: var(--black-color);
@@ -216,17 +299,28 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 8px;
+  padding: 6px 22px;
 }
 .buttonFilter:hover,
 .buttonFilter:focus {
   background: var(--background-color-button);
   color: var(--color-white);
 }
+.portfolioImg {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolioItems {
+  flex-basis: calc(100% / 3);
+  padding-top: 30px;
+}
 .titleImg {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  padding-top: 20px;
 }
 .workImg {
   font-weight: normal;
@@ -234,4 +328,16 @@ body {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--color-grey);
+  padding-top: 4px;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+.hr {
+  align-items: center;
+  color: rgb(214, 214, 214);
+  width: 1600px;
 }
